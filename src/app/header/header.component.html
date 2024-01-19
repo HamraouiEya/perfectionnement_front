@@ -1,0 +1,58 @@
+<header class="app-header">
+  <div class="left-section">
+    <img src="/assets/logo.jpg">
+  </div>
+  <div class="right-section" >
+    <i class="bi bi-telephone-fill" style="font-size:large;">  (+216) 71 254 444</i>
+    <span class="separator">|</span>
+    <i class="bi bi-mortarboard-fill" style="font-size:large;color:#cc1d1d"></i>
+    <a routerLink="/about" style="font-size:large;" class="fade-effect"> Pré-inscription</a>
+    <span class="separator">|</span>
+    <i class="bi bi-envelope-fill" style="font-size:large;"></i>
+    <a routerLink="/about" style="font-size:large;">Contactez-nous</a>
+  </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="centered.toggle()"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarCenteredExample"
+      mdbCollapse
+      #centered="mdbCollapse"
+    >
+      <!-- Left links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+

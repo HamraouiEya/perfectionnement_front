@@ -1,0 +1,86 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white; /* Adjust the background color as needed */
+  color: #0855b1; /* Adjust the text color as needed */
+}
+
+.left-section img {
+  width: 270px; /* Adjust the width of the photo as needed */
+   /* Optional: Add a border-radius for a circular image */
+}
+
+.right-section a {
+  margin-right: 40px;
+  color: #0855b1;
+  margin-left: 5px; /* Adjust the spacing between links as needed */
+  text-decoration: none;
+}
+
+.separator {
+  margin: 10px;
+  color: #0855b1; /* Adjust the color of the separator as needed */
+}
+
+.right-section a:hover {
+  text-decoration: underline;
+}
+
+#mortarboard-icon {
+  margin-right: 5px; /* Adjust the spacing between icon and text as needed */
+}
+/*
+#inscription-text {
+  animation: lightUpAndOff 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes lightUpAndOff {
+  0% {
+    color: beige; /* Initial color */
+ /* }
+  100% {
+    color: #0855b1; /* Target color  */
+  /*}
+}
+*/
+
+#inscription-text {
+  font-size: large;
+}
+
+.fade-effect {
+  animation: fadeEffect 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 5; /* Initial opacity (adjust as needed) */
+    color: #ffffff; /* Initial color (white) */
+  }
+  100% {
+    opacity: 8; /* Target opacity (fully visible) */
+    color: #cc1d1d; /* Target color (gold) - adjust as needed */
+  }
+}
+
+
+
+
+/*#inscription-text {
+  animation: fadeEffect 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0.5;
+    color: #ffffff;
+  }
+  100% {
+    opacity: 1;
+    color: #0855b1;
+  }
+}*/
+
+
