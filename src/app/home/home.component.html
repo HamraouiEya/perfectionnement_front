@@ -1,1 +1,177 @@
-<p>home works!</p>
+<app-header></app-header>
+<div class="slideshow-container">
+  <div *ngFor="let image of images; let i = index" [class.hide]="i !== currentSlideIndex" class="img1">
+    <img [src]="image" alt="Slide {{ i + 1 }}" style="width: 100%; height: 100%; ">
+    <div class="text" *ngIf="i === 1">Inscrivez-vous Maintenant!</div>
+  </div>
+</div>
+
+<div class="video-container">
+  <div class="video-content">
+    <h6 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 30px;  font-weight: bold;color:#9f2525;padding-left:150px">A propos</h6>
+    <br>
+    <p style="padding-left: 150px;">L’ACADEMIE SHERBROOKE CANADA – TUNISIE est une école privée de formation professionnelle.
+      Elle est née en 2015 de la suite d’un partenariat entre le <span style="color:cornflowerblue;"> CEGEP DE SHERBROOKE</span> , un grand établissement d’enseignement supérieur public francophone canadien, et l’institution tunisienne privée de formation professionnelle continue <span style="color:cornflowerblue;">ECS FORMATION</span>  et dont l’objet est la délocalisation des formations professionnelles qualifiantes canadiennes en Tunisie.</p>
+  </div>
+  <div class="video-wrapper">
+    <video width="640" height="360" controls>
+      <source src="/assets/Bien.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+<!--<div class="gallery">
+  <span style="--i:1">
+    <img src="/assets/finance.jpg" alt="" />
+  </span>
+  <span style="--i:2">
+    <img src="/assets/dev.jpg" alt="" />
+  </span>
+  <span style="--i:3">
+    <img src="/assets/commerce.avif" alt="" />
+  </span>
+  <span style="--i:4">
+    <img src="/assets/gestcom.jpeg" alt="" />
+  </span>
+  <span style="--i:5">
+    <img src="/assets/mark.png" alt="" />
+  </span>
+  <span style="--i:6">
+    <img src="/assets/infoges.jpg" alt="" />
+  </span>
+  <span style="--i:7">
+    <img src="/assets/gestent.jpg" alt="" />
+  </span>
+  <span style="--i:8">
+    <img src="" alt="" />
+  </span>
+</div>-->
+<div>
+  <h5 style="color: #9f2525; padding-left: 180px; padding-top: 120px; font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+    FORMATIONS DIPLÔMANTES
+  </h5>
+  <i class="bi bi-filter-left" style="position: relative; top: -27px; padding-left: 175px; font-size: 50px; color: #9f2525;"></i>
+</div>
+
+<div style="display: flex; justify-content: space-around; align-items: baseline; padding-left:230px;padding-right:230px;padding-top:10px">
+  <a href="" style="flex: 1; text-align: center; text-decoration: none;">
+    <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src='/assets/finance.jpg' class="img2" alt='Mountains and volcanos' style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc; padding:5px">
+      <figcaption style="padding: 10px;">
+    Finances et Comptabilité
+      </figcaption>
+    </figure>
+  </a>
+  <a href="" style="flex: 1; text-align: center; text-decoration: none;">
+    <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src='/assets/dev.jpg' class="img2" alt='Mountains and volcanos' style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+      <figcaption style="padding: 10px;">
+     Développement Web
+      </figcaption>
+    </figure>
+  </a>
+  <a href="" style="flex: 1; text-align: center; text-decoration: none;">
+    <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src='/assets/commerce.avif' class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+      <figcaption style="padding: 10px;">Commerce International</figcaption>
+    </figure>
+  </a>
+  <a href="" style="flex: 1; text-align: center; text-decoration: none;">
+    <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <img src='/assets/gestcom.jpeg' class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+      <figcaption style="padding: 10px;">Gestion de Commerce</figcaption>
+    </figure>
+  </a>
+</div>
+
+<div style="display: flex; justify-content: space-around; align-items: baseline; padding-left:230px;padding-right:230px;padding-top:20px" >
+<a href="" style="flex: 1; text-align: center; text-decoration: none;">
+  <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src='/assets/mark.png'class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+    <figcaption style="padding: 10px;">Marketing et Ventes</figcaption>
+  </figure>
+</a>
+<a href="" style="flex: 1; text-align: center; text-decoration: none;">
+  <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src='/assets/infoges.jpg' class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+    <figcaption style="padding: 10px;">Informatique de Gestion</figcaption>
+  </figure>
+</a>
+<a href="" style="flex: 1; text-align: center; text-decoration: none;">
+  <figure style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src='/assets/gestent.jpg' class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+    <figcaption style="padding: 10px;">Gestion des Entreprises</figcaption>
+  </figure>
+</a>
+<a href="" style="flex: 1; text-align: center; text-decoration: none;">
+  <figure Style="width: 100%; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src='/assets/bureau.jpg' class="img2" style="width: 100%; max-width: 100%; height: auto; border-bottom: 1px solid #ccc;padding:5px">
+    <figcaption style="padding: 10px;">Spécialisation en Bureautique</figcaption>
+  </figure>
+</a>
+</div>
+<div>
+  <h5 style="color: #9f2525; padding-left: 180px; padding-top: 120px; font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+    FORMATIONS ACCÉLÉRÉES
+  </h5>
+  <i class="bi bi-filter-left" style="position: relative; top: -27px; padding-left: 175px; font-size: 50px; color: #9f2525;"></i>
+</div>
+<div class="card-container">
+  <div *ngFor="let item of formation" class="card">
+    <h3 >{{ item.title }}</h3>
+    <img [src]="item.content" alt="{{ item.title }}" class="card-image" >
+  </div>
+</div>
+<i class="bi bi-chevron-double-down" (click)="changeForm()" style="position: relative; display: flex; justify-content: center; font-size: 40px; color: #9f2525; cursor: pointer;"></i>
+
+<div class="card-container" [hidden]="hideForm">
+  <div *ngFor="let item of formation2" class="card">
+    <h3 style="font-size:large;">{{ item.title }}</h3>
+    <img [src]="item.content" alt="{{ item.title }}" class="card-image">
+  </div>
+</div>
+<br><br><br><br><br><br>
+<div style="display: flex; align-items: center; font-size: 20px; padding-left: 250px;">
+  <p style="margin: 0; margin-right: 10px;color:#012e6d">TÉMOIGNAGE</p>
+  <span><i class="bi bi-grip-horizontal" style="font-size: 50px;color:#012e6d"></i></span>
+</div>
+<h2 style="margin: 0; padding-left: 250px; position: relative; top: -20px;font-weight:bold;font-size:45px">Fierté Académique</h2>
+<div style="display: flex; align-items: flex-start; justify-content: flex-start;">
+  <!-- Sections -->
+  <div style="flex: 1; padding-left: 250px;">
+    <div style="display: flex; align-items: center; font-size: 17px; margin-bottom: 5px;margin-top: -20px;">
+      <i class="bi bi-arrow-right-short" style="color:cadetblue; font-size:40px;"></i>
+      <p style="margin: 0; margin-right: 10px;">Education Canadienne de Grande Qualité en Tunisie</p>
+    </div>
+    <div style="display: flex; align-items: center; font-size: 17px; margin-bottom: 5px;margin-top: -30px;">
+      <i class="bi bi-arrow-right-short" style="color:cadetblue; font-size:40px;"></i>
+      <p style="margin: 0; margin-right: 10px;">Des diplômes professionnels internationaux</p>
+    </div>
+    <div style="display: flex; align-items: center; font-size: 17px; margin-bottom: 5px;margin-top: -30px;">
+      <i class="bi bi-arrow-right-short" style="color:cadetblue; font-size:40px;"></i>
+      <p style="margin: 0; margin-right: 10px;">Des programmes de formation d'exception</p>
+    </div>
+    <p>Les étudiants ont eu l'opportunité de partir en mobilité d'études ou de stage à l'étranger
+      dans le cadre de leur cursus à l'académie Sherbrooke Canada-Tunisie. Découvrez leurs impressions,
+      retours et conseils sur leurs expériences de mobilité.</p>
+  </div>
+
+  <!-- Video -->
+  <div style="flex: 1; margin-top: -140px;">
+    <div class="video-wrapper" style="padding-left: 20px;padding-right:250px">
+      <video width="640" height="360" controls>
+        <source src="/assets/tem1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+<i class="bi bi-chevron-double-down" (click)="changeForm2()" style="position: relative; display: flex; justify-content: center; font-size: 40px; color:#012e6d; cursor: pointer;"></i>
+<div class="card-container" [hidden]="hideForm2">
+  <div *ngFor="let item of tem" style="">
+    <video width="300" height="360" controls style="margin-left: 20px;padding:20px">
+      <source [src]="item" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>

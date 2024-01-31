@@ -65,22 +65,59 @@
   }
 }
 
-
-
-
-/*#inscription-text {
-  animation: fadeEffect 1s ease-in-out infinite alternate;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9f2525;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #012e6d;
+  z-index: 1;
 }
 
-@keyframes fadeEffect {
+.dropdown-content a {
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #012e6d;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Apply animation to dropdown-menu-6 */
+.dropdown-menu-6 {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+/* Apply styles to make the menu initially hidden */
+.dropdown-menu-6 {
+  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Display the menu on hover */
+.dropdown:hover .dropdown-menu-6 {
+  display: block;
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+  animation: growDown 300ms ease-in-out forwards;
+}
+
+/* Keyframes for the growDown animation */
+@keyframes growDown {
   0% {
-    opacity: 0.5;
-    color: #ffffff;
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
   }
   100% {
-    opacity: 1;
-    color: #0855b1;
+    transform: scaleY(1);
   }
-}*/
+}
 
 

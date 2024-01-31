@@ -1,1 +1,14 @@
-<p>actuality works!</p>
+<div class="container">
+  <div class="sHeader">Actualités</div>
+  <div class="owl-container">
+    <div class="owl-carousel mySwiper">
+      <div class="card1" *ngFor="let act of actualites">
+        <img [src]="act.img" alt="News Image" class="card-img">
+        <div class="card-body">
+          <h3 class="card-h3">{{ act.nom }} {{act.date}}</h3>
+          <p class="card-p">{{ act.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 20, 20, 1);
+}
+
+/* Image Styles */
+img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 1000ms;
+}
+
+/* Container for Figures */
+.figure-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adjust as needed */
+  justify-content: space-around; /* Adjust as needed */
+}
+
+/* Figure Styles */
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: calc(25% - 1rem); /* 1rem is the gap between figures */
+  margin-bottom: 1rem; /* Adjust as needed */
+  box-sizing: border-box; /* Added to ensure proper width calculation */
+  border: 2px solid white; /* Border styling */
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+/* Hover Effects */
+a:hover figure::after,
+a:focus figure::after {
+  opacity: 1;
+}
+
+a:hover figcaption,
+a:focus figcaption {
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+a:hover img,
+a:focus img {
+  transform: scale(1.2);
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+  .figure-container {
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  figure {
+    width: calc(50% - 1rem);
+  }
+}
+
+/* Add this to your CSS file or styles.css */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.card {
+  width: 350px;
+  height: 400px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  background-color: #012e6d;
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+.card-image {
+  flex-grow: 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Optional: Rounded corners only at the top */
+}

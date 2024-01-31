@@ -1,0 +1,300 @@
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.img1 {
+  width: 100%;
+  height: auto;
+  height: 800px;
+  padding: 10px;
+   /* This property ensures the image covers the entire container while maintaining its aspect ratio */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hide {
+  display: none;
+}
+.text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  font-style:oblique;
+}
+/* Add this to your component's CSS file or styles.css */
+
+.video-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.video-content {
+  flex: 1;
+  margin-right: 100px; /* Adjust as needed */
+}
+
+.video-wrapper {
+  flex: 1;
+}
+
+video {
+  width: 600px;
+  height: 450px;
+}
+
+/*div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+  margin:0;
+  height:100vh;
+  display:grid;
+  place-items:center;
+  background-color:#010101;
+}
+
+.gallery{
+  position:relative;
+  width:300px;
+  height:200px;
+  transform-style:preserve-3d;
+  animation:rotate 200s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform:perspective(1200px) rotateY(0deg);
+  }
+
+  to{
+    transform:perspective(1200px) rotateY(360deg);
+  }
+}
+
+/*.gallery span{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-origin:center;
+  transform-style:preserve-3d;
+  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}*/
+/* General Styles */
+/* Image Styles */
+
+.img2{
+  width: 100%;
+  display: block;
+  max-height: 230px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 1000ms;
+}
+/* Container for Figures */
+.figure-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adjust as needed */
+  justify-content: space-around; /* Adjust as needed */
+}
+
+/* Figure Styles */
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: calc(25% - 1rem); /* 1rem is the gap between figures */
+  margin-bottom: 1rem; /* Adjust as needed */
+  box-sizing: border-box; /* Added to ensure proper width calculation */
+  border: 2px solid white; /* Border styling */
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+/* Hover Effects */
+a:hover figure::after,
+a:focus figure::after {
+  opacity: 1;
+}
+
+a:hover figcaption,
+a:focus figcaption {
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+a:hover img,
+a:focus img {
+  transform: scale(1.2);
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+  .figure-container {
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  figure {
+    width: calc(50% - 1rem);
+  }
+}
+/* Add this to your CSS file or styles.css */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.card {
+  width: 350px;
+  height: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+font-size: 5ex;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out; /* Added transition property */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Example: Increase scale on hover */
+}
+
+.card h3 {
+  background-color:aliceblue;
+  font-size:large;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#012e6d;
+  margin: 5px;
+  padding: 10px;
+}
+
+.card-image {
+  flex-grow: 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Optional: Rounded corners only at the top */
+}
+
+

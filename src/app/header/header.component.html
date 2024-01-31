@@ -10,49 +10,71 @@
     <span class="separator">|</span>
     <i class="bi bi-envelope-fill" style="font-size:large;"></i>
     <a routerLink="/about" style="font-size:large;">Contactez-nous</a>
-  </div>
-</header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      (click)="centered.toggle()"
-      aria-controls="navbarCenteredExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div
-      class="collapse navbar-collapse justify-content-center"
-      id="navbarCenteredExample"
-      mdbCollapse
-      #centered="mdbCollapse"
-    >
-      <!-- Left links -->
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-            >Disabled</a
-          >
-        </li>
+  </div></header>
+  <!--<nav class="navbar navbar-expand-lg "  style="background-color: #9f2525;">
+    <div class="container justify-content-center">
+      <a class="nav-link text-light" href="#" style="margin-left: 200px;">Acceuil</a>
+      <span class="separator text-light">|</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active dropdown">
+            <a class="nav-link text-light dropdown-toggle" href="#">Home</a>
+          </li>
+          <span class="separator text-light">|</span>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Features</a>
+          </li>
+          <span class="separator text-light">|</span>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>justify-content-center
+  </nav>-->
+  <ul class="nav nav-tabs " style="background-color:#9f2525;">
+    <li class="nav-item">
+      <a class="nav-link " style="margin-left: 500px; color:white;" href="#">Acceuil</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="dropdown1" role="button" style="color: white;">A propos </a>
+      <ul class="dropdown-content dropdown-menu-6">
+        <li><a class="dropdown-item" href="#">Qui sommes nous </a></li>
+        <li><a class="dropdown-item" href="#">Pourquoi nous choisir</a></li>
+        <li><a class="dropdown-item" href="#">Service aux étudiants</a></li>
+        <li><a class="dropdown-item" href="#">Poursuivez Vous Etudes au Canada</a></li>
+        <li><a class="dropdown-item" href="#">Réseau International</a></li>
+        <li><a class="dropdown-item" href="#">Régime des Etudes</a></li>
       </ul>
-      <!-- Left links -->
-    </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-
-
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" style="color: white;"href="#">Admissions</a>
+      <ul class="dropdown-content dropdown-menu-6">
+        <li><a class="dropdown-item" href="#">Procédure d'Admission</a></li>
+        <li><a class="dropdown-item" href="#">Procédure d'Inscription</a></li>
+        <li><a class="dropdown-item" href="#">Documents Requis</a></li>
+        <li><a class="dropdown-item" href="#">Calendrier Scolaire</a></li>
+        <li><a class="dropdown-item" href="#">Etudiants Internationaux</a></li>
+        <li><a class="dropdown-item" href="#">Découvrez la Tunisie</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" style="color: white;" href="#">Programmes</a>
+      <ul class="dropdown-content dropdown-menu-6">
+        <li><a class="dropdown-item" href="#">Formation Finances et Comptabilité</a></li>
+        <li><a class="dropdown-item" href="#">Formation Gestion des Entreprises</a></li>
+        <li><a class="dropdown-item" href="#">Formation Développement Web</a></li>
+        <li><a class="dropdown-item" href="#">Formation Informatique de Gestion</a></li>
+        <li><a class="dropdown-item" href="#">Formation Marketing et Ventes</a></li>
+        <li><a class="dropdown-item" href="#">Formation Gestion de Commerce</a></li>
+        <li><a class="dropdown-item" href="#">Formation Commerce International</a></li>
+        <li><a class="dropdown-item" href="#">Formation Spécialisation en Bureautique</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="color: white;">E-learning</a>
+    </li>
+  </ul>

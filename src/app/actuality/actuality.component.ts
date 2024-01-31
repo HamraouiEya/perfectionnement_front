@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Actualite } from '../actualite';
+import { ActualiteService } from '../services/actualite.service';
 
 @Component({
   selector: 'app-actuality',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class ActualityComponent {
 
+  actualites:Actualite[]=[];
+
+  constructor(private act:ActualiteService){}
+
+  ngOnInit(): void
+  {
+    this.act.getActualites().subscribe((data) =>(this.actualites=data));
+  }
 }

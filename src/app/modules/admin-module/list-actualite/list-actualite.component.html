@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let actualite of actualites ">
+    <td> {{actualite.nom}}</td>
+    <td>{{actualite.date}}</td>
+    <td>{{actualite.description}}</td>
+    <td>{{actualite.img}}</td>
+    <td><i class="fa-sharp fa-regular fa-pen-circle" (click)="ChangeActualite(actualite)"></i></td>
+    <td><i class="fa-sharp fa-solid fa-trash-can" (click)="deleteActualite(actualite.id)"></i></td>
+  </tr>
+</table>
+
+<div class="center">
+  <h1 (click)="changeForm()">Créer Actualité</h1>
+  <form [formGroup]="actForm" [hidden]="hideForm" >
+    <div class="inputbox" >
+      <input type="text" required="required" formControlName="nom">
+      <span>Nom</span>
+    </div>
+    <div class="inputbox">
+      <input type="date" required="required" formControlName="date">
+      <span>Date</span>
+    </div>
+    <div class="inputbox">
+      <textarea required="required" rows="3" cols="40" formControlName="desc"></textarea>
+      <span>Description</span>
+    </div>
+    <div >
+      <input type="file" required="required" style="padding-bottom: 30px;padding-top: 30px;" formControlName="img">
+    </div>
+    <div class="button-container">
+      <div class="inputbox">
+        <input type="button" value="Ajouter" (click)="AddActualite()">
+      </div>
+      <div class="inputbox">
+        <input type="button" value="Modifier" (click)="UpdateActualite()">
+      </div>
+    </div>
+
+  </form>
+</div>

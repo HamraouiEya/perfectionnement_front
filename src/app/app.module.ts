@@ -7,7 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ActualityComponent } from './actuality/actuality.component';
-import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from '@auth0/auth0-angular';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +21,28 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ActualityComponent
+    ActualityComponent,
+    AdminLoginComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCollapseModule
+    NgbModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AuthModule.forRoot(
+      {
+        domain:"dev-n44fmgx5sr0iww0e.us.auth0.com",
+        clientId:"gLrxaWPEpPGo3yClw6y7sNCItIOnmXR1",
+        authorizationParams:{
+          redirect_uri:window.location.origin+"/home"
+        }
+      }
+    ),
+    FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
